@@ -7,6 +7,10 @@ import { HorariosComponent } from './horarios/horarios.component';
 import { DatoPersonalComponent } from './dato-personal/dato-personal.component';
 import { DatoPlataformaComponent } from './dato-plataforma/dato-plataforma.component';
 import { CampaniaComponent } from './campania/campania.component';
+import { MoodleComponent } from './moodle/moodle.component';
+import { NivelAcademicoComponent } from './nivel-academico/nivel-academico.component';
+import { MentorComponent } from './mentor/mentor.component';
+import { MensajesComponent } from './mensajes/mensajes.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { CampaniaComponent } from './campania/campania.component';
     HorariosComponent,
     DatoPersonalComponent,
     DatoPlataformaComponent,
-    CampaniaComponent
+    CampaniaComponent,
+    MoodleComponent,
+    NivelAcademicoComponent,
+    MentorComponent,
+    MensajesComponent
   ],
   imports: [
     BrowserModule,
