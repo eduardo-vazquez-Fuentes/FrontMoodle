@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HorariosService } from './horarios.service';
 
 @Component({
   selector: 'app-horarios',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HorariosComponent implements OnInit {
 
-  constructor() { }
+  dat = {dia: 2020-10-29};
+
+  constructor(private HorariosSer: HorariosService) { }
 
   ngOnInit(): void {
+    this.HorariosSer.getHorarios().subscribe(data => {console.log(data)});
+  }
+
+  agregarHorarios(){
+    this.HorariosSer.createHorarios(this.dat).subscribe((data: {}) => {console.log(data);});
   }
 
 }

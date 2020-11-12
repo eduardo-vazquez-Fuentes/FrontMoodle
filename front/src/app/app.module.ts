@@ -11,6 +11,10 @@ import { MoodleComponent } from './moodle/moodle.component';
 import { NivelAcademicoComponent } from './nivel-academico/nivel-academico.component';
 import { MentorComponent } from './mentor/mentor.component';
 import { MensajesComponent } from './mensajes/mensajes.component';
+import { DatoPersonalService } from './dato-personal/dato-personal.service';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,11 @@ import { MensajesComponent } from './mensajes/mensajes.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DatoPersonalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

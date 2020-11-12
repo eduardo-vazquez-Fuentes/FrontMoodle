@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MoodleService } from './moodle.service';
 
 @Component({
   selector: 'app-moodle',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoodleComponent implements OnInit {
 
-  constructor() { }
+  dat = {usuario: 'Samuel', password: '12345'};
+
+  constructor(private MoodleSer: MoodleService) { }
 
   ngOnInit(): void {
+    this.MoodleSer.getMoodle().subscribe(data => {console.log(data)});
+  }
+
+  agregarMoodle(){
+    this.MoodleSer.createMoodle(this.dat).subscribe((data: {}) => {console.log(data);});
   }
 
 }
