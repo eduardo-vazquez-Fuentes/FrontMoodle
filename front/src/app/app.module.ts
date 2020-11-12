@@ -15,6 +15,8 @@ import { DatoPersonalService } from './dato-personal/dato-personal.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { from } from 'rxjs';
+import { MensajePersonaComponent } from './mensaje-persona/mensaje-persona.component';
+import { AgendaComponent } from './agenda/agenda.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { from } from 'rxjs';
     NivelAcademicoComponent,
     MentorComponent,
     MensajesComponent
+    MensajePersonaComponent,
+    AgendaComponent,
   ],
   imports: [
     BrowserModule,
